@@ -42,3 +42,13 @@ class iniReader:
     def readFile(self, fName):
         with open(fName, "r") as f:
             return f.read()
+
+def main():
+    x = iniReader(".ini")
+    x.set("Date created", "[Imagine time here]")
+    x.set("Score", "2147483647")
+
+    print(x.get("Score"))
+
+if __name__ == "__main__":
+    main()
