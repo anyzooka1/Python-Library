@@ -18,6 +18,7 @@ def deleteFile(fName):
         pass
 
 def main():
+    print("\n--------------- FILE HANDLING TEST ---------------\n")
     deleteFile("test.txt")
     appendFile("test.txt", "Contents")
     print(readFile("test.txt"))

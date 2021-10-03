@@ -44,6 +44,7 @@ class iniReader:
             return f.read()
 
 def main():
+    print("\n--------------- INI READER TEST ---------------\n")
     x = iniReader(".ini")
     x.set("Date created", "[Imagine time here]")
     x.set("Score", "2147483647")

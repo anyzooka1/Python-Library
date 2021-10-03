@@ -25,15 +25,15 @@ def optionSelector(optionList, start=">>>", end="<<<"):
             if index < 0:
                 index = len(optionList) - 1
 
-        if inp == b'\r':
-            for i in optionList:
-                print ("\033[A                             \033[A") 
-            return optionList[index]
-
         for i in optionList:
             print ("\033[A                             \033[A") 
 
+        if inp == b'\r':
+            return optionList[index]
+
+
 def main():
+    print("\n--------------- OPTION SELECTOR TEST ---------------\n")
     print(f'Option: \'{optionSelector(["Option 1", "Option 2", "Option 3", "Option 4", "Option 5"], start=">", end="<")}\' selected')
 
 if __name__ == "__main__":
